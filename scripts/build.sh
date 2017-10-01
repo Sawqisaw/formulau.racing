@@ -2,6 +2,7 @@
 
 rm -rf public/*
 rsync -av . public/ \
+  --exclude .git/ \
   --exclude public/ \
   --exclude scripts/ \
   --exclude tags

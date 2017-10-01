@@ -7,7 +7,7 @@ rsync -av . public/ \
   --exclude scripts/ \
   --exclude tags
 
-test -n "DEV" && exit
+test -z "$DEV" || exit
 
 ./scripts/minify \
   --html-keep-document-tags \

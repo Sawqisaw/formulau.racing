@@ -1,7 +1,7 @@
 (function($) {
   "use strict";
 
-  $('a.js-scroll-trigger').click(function(event) {
+  $('a.smoothscroll').click(function(event) {
     if (this.hash !== "") {
       event.preventDefault();
 

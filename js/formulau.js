@@ -5,14 +5,13 @@
     if (this.hash !== "") {
       event.preventDefault();
 
-      var hash = this.hash;
       window.scroll({
-        top: $(hash).offset().top,
+        top: $(this.hash).offset().top,
         left: 0,
         behavior: 'smooth'
       });
 
-      window.location.hash = hash;
+      history.pushState(null, null, this.hash)
     }
 
     $('.navbar-collapse').collapse('hide');

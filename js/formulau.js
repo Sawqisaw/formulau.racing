@@ -3,14 +3,16 @@
 
   $('a.js-scroll-trigger').click(function(event) {
     if (this.hash !== "") {
-      event.preventDefault()
-      window.scroll({ 
-        top: $(this.hash).offset().top,
+      event.preventDefault();
+
+      var hash = this.hash;
+      window.scroll({
+        top: $(hash).offset().top,
         left: 0,
         behavior: 'smooth'
       });
 
-      window.location.hash = this.hash;
+      window.location.hash = hash;
     }
 
     $('.navbar-collapse').collapse('hide');

@@ -57,7 +57,8 @@
     }
 
     .nav-link.active {
-      background-color: rgba(white, .3);
+      color: white;
+      background-color: darken(white, 80%);
     }
   }
 }

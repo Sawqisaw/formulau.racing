@@ -96,7 +96,8 @@ a:focus, a:hover {
     padding-bottom: 10px;
   }
   #navbar .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    background-color: #333333;
   }
 }
 

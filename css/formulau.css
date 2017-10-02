@@ -43,6 +43,10 @@ p {
   }
 }
 
+p .tagline {
+  font-size: 1.5rem;
+}
+
 a {
   color: white;
   transition: all 0.2s ease-in-out;

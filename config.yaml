@@ -3,4 +3,12 @@ title: Formula U Racing
 baseURL: https://formulau.racing/
 
 params:
+  description: Formula U Racing is the University of Utah's Formula SAE team. Formula U designs and builds custom race cars to participate in an international competition.
+  keywords:
+    - formula
+    - formula sae
+    - engineering
+    - student engineering
+    - u of u
+    - university of utah
   gauges: 59cfe50f7218b50962009e57

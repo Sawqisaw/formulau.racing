@@ -1,5 +1,13 @@
 #!/bin/sh
 
+wt compile \
+    --build="css" \
+    --dir="img" \
+    --font="fonts" \
+    --style=expanded \
+    --debug=true \
+    scss
+
 rm -rf public/*
 rsync -av . public/ \
   --exclude .git/ \

@@ -1,7 +1,8 @@
 (function($) {
   "use strict";
 
-  $('a.smoothscroll').click(function(event) {
+  // Smooth scrolling to hashes.
+  $('a.smoothscroll').on("click", function(event) {
     if (this.hash !== "") {
       event.preventDefault();
 
@@ -17,8 +18,9 @@
     $('.navbar-collapse').collapse('hide');
   });
 
-  $(window).scroll(function() {
-    if ($("#navbar").offset().top > 100) {
+  // Shrink the navbar when we scroll 15% down.
+  $(window).on("load scroll", function() {
+    if ($("#navbar").offset().top > $(window).height() * 0.15) {
       $("#navbar").addClass("navbar-shrink");
     } else {
       $("#navbar").removeClass("navbar-shrink");

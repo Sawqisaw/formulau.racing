@@ -29,11 +29,11 @@
   });
 
   $(window).on('load scroll', function() {
-    // Shrink the navbar when we scroll 15% down.
+    // Turn the navbar solid when we scroll 15% down.
     if ($('#navbar').offset().top >= $(window).height() * 0.15) {
-      $('#navbar').addClass('navbar-shrink');
+      $('#navbar').addClass('navbar-solid');
     } else {
-      $('#navbar').removeClass('navbar-shrink');
+      $('#navbar').removeClass('navbar-solid');
     }
   });
 

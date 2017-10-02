@@ -16,7 +16,7 @@
 #navbar {
   @include navbar-clear;
 
-  &.navbar-shrink {
+  &.navbar-solid {
     @include navbar-black;
   }
 
@@ -51,7 +51,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
-    &.navbar-shrink {
+    &.navbar-solid {
       padding-top: 10px;
       padding-bottom: 10px;
     }

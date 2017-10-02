@@ -8,6 +8,7 @@ fi
 rm -rf public/
 mkdir -p public/
 git worktree prune
+rm -rf .git/worktrees/public
 
 git worktree add -B gh-pages public origin/gh-pages
 

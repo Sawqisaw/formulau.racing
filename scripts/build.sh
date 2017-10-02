@@ -1,6 +1,6 @@
 #!/bin/sh
 
-wt compile \
+./scripts/wt compile \
     --build="css" \
     --dir="img" \
     --font="fonts" \

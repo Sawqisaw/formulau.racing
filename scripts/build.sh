@@ -13,6 +13,8 @@ rsync -av . public/ \
   --exclude .git/ \
   --exclude public/ \
   --exclude scripts/ \
+  --exclude img/src/ \
+  --exclude scss/ \
   --exclude tags
 
 test -z "$DEV" || exit

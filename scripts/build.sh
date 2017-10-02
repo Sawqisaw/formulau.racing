@@ -1,21 +1,16 @@
 #!/bin/sh
 
 ./scripts/wt compile \
-    --build="css" \
-    --dir="img" \
-    --font="fonts" \
+    --build="static/css" \
+    --dir="static/img" \
+    --font="static/fonts" \
     --style=expanded \
     --debug=true \
-    scss
+    static/scss
 
 rm -rf public/*
-rsync -av . public/ \
-  --exclude .git/ \
-  --exclude public/ \
-  --exclude scripts/ \
-  --exclude img/src/ \
-  --exclude scss/ \
-  --exclude tags
+
+./scripts/hugo -d public/
 
 test -z "$DEV" || exit
 

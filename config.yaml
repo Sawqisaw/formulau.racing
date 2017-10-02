@@ -1,0 +1,6 @@
+languageCode: en-us
+title: Formula U Racing
+baseURL: https://formulau.racing/
+
+params:
+  gauges: 59cfe50f7218b50962009e57

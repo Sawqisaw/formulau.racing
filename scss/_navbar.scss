@@ -1,0 +1,64 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+// The navbar is transparent.
+@mixin navbar-clear {
+  border-bottom: none;
+  background: transparent;
+}
+
+// The navbar is black with a gray border.
+@mixin navbar-black {
+  border-bottom: 1px solid fade-out(white, .7);
+  background-color: black;
+}
+
+#navbar {
+  @include navbar-clear;
+
+  &.navbar-shrink {
+    @include navbar-black;
+  }
+
+  transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+
+  a {
+    color: white;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      color: darken(white, 20%);
+      text-decoration: none;
+    }
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+
+    color: white;
+    border: 1px solid white;
+  }
+
+  // Only on desktop/laptop devices.
+  @media(min-width: 992px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &.navbar-shrink {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .nav-link.active {
+      background-color: rgba(white, .3);
+    }
+  }
+}
+

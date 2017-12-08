@@ -4,7 +4,17 @@
       <div class="col col-10 col-lg-10 mx-auto">
         <h2>Sponsors</h2>
 
-        <p>Placeholder</p>
+	{{ $url := "/img/sponsorship_logos" }}
+	{{ $files := readDir "/static/img/sponsorship_logos" }}
+	<div>
+	  {{ range $files }}
+	  <figure>
+	    <a href="{{$url}}/{{.Name | urlize }}">
+	      <img src="{{$url}}/{{.Name | urlize }}">
+	    </a>
+	  </figure>
+	  {{ end }}
+	</div>
       </div>
     </div>
   </div>

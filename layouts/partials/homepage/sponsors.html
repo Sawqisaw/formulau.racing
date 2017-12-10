@@ -10,7 +10,7 @@
 	  {{ range $files }}
 	  <figure>
 	    <a href="{{$url}}/{{.Name | urlize }}">
-	      <img src="{{$url}}/{{.Name | urlize }}">
+	      <img class="img-fluid" src="{{$url}}/{{.Name | urlize }}">
 	    </a>
 	  </figure>
 	  {{ end }}

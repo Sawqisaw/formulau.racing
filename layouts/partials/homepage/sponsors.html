@@ -1,3 +1,5 @@
+{{ $cols := 3 }}
+
 <section id="sponsors" class="content-section text-center">
   <div class="container">
     <div class="row">
@@ -6,13 +8,24 @@
 
 	{{ $url := "/img/sponsorship_logos" }}
 	{{ $files := readDir "/static/img/sponsorship_logos" }}
+	{{ $count := len $files }}
 	<div>
-	  {{ range $files }}
-	  <figure>
-	    <a href="{{$url}}/{{.Name | urlize }}">
-	      <img class="img-fluid" src="{{$url}}/{{.Name | urlize }}">
-	    </a>
-	  </figure>
+	  {{ range $index, $file := $files }}
+	  {{ $isLastElem := not (sub (sub $count 1) $index) }}
+	  <!-- If we need to make a new row, make one. -->
+	  {{ if modBool $index $cols }}
+	  <div class="row">
+	    {{ end }}
+	    <div class="col-sm-4">
+	      <figure>
+		<a href="{{$url}}/{{$file.Name | urlize }}">
+		  <img class="img-fluid" src="{{$url}}/{{$file.Name | urlize }}">
+		</a>
+	      </figure>
+	    </div>
+	  {{ if or (modBool (add $index 1) $cols) $isLastElem }}
+	  </div>
+	  {{ end }}
 	  {{ end }}
 	</div>
       </div>

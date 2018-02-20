@@ -1,10 +1,33 @@
+{{ $cols := 3 }}
+
 <section id="media" class="content-section text-center">
   <div class="container">
     <div class="row">
       <div class="col col-10 col-lg-8 mx-auto">
         <h2>Media Gallery</h2>
-
-        <p>Coming Soon!</p>
+	
+	{{ $url := "/img/media_gallery" }}
+	{{ $files := readDir "/static/img/media_gallery" }}
+	{{ $count := len $files }}
+	<div>
+	  {{ range $index, $file := $files }}
+	  {{ $isLastElem := not (sub (sub $count 1) $index) }}
+	  <!-- If we need to make a new row, make one. -->
+	  {{ if modBool $index $cols }}
+	  <div class="row">
+	    {{ end }}
+	    <div class="col-sm-4">
+	      <figure>
+		<a href="{{$url}}/{{$file.Name | urlize }}">
+		  <img class="img-fluid" src="{{$url}}/{{$file.Name | urlize }}">
+		</a>
+	      </figure>
+	    </div>
+	    {{ if or (modBool (add $index 1) $cols) $isLastElem }}
+	  </div>
+	  {{ end }}
+	  {{ end }}
+	</div>
       </div>
     </div>
   </div>

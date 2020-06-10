@@ -1,0 +1,6 @@
+# formulau.racing
+This is the team site for the Formula U Racing Team at the University of Utah. The site is statically generated using Hugo, using docker containers as a platform-agnostic build system.
+
+## Building the site:
+In order to build the site, simply run the './docker-build.sh' script. There's also an included docker-compose file that, if run, starts a simple Nginx server so the site can be tested locally. In order to start the webserver, just run 'docker-compose up'.
+

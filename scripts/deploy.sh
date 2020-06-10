@@ -12,7 +12,7 @@ rm -rf .git/worktrees/public
 
 git worktree add -B gh-pages public origin/gh-pages
 
-sh scripts/build.sh
+sh docker-build.sh
 
 cd public && git add --all && git commit -m "update"
 git push --force origin gh-pages

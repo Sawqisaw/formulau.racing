@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"
+    restart: unless-stopped

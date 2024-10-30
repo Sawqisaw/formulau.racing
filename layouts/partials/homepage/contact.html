@@ -1,10 +1,25 @@
-<section id="contact" class="content-section text-center">
+<section id="contact" class="content-section text-center bg-light py-5">
   <div class="container">
     <div class="row">
       <div class="col col-10 col-lg-8 mx-auto">
-        <h2>Contact Formula U</h2>
-
-        <h3>Team Captain: Lisa Stranski (formula.u.racing@gmail.com) </h3>
+        <h2 class="mb-4">Contact Formula U</h2>
+        <h3 class="mb-4">Team Captain: <a href="mailto:formula.u.racing@gmail.com">Lisa Stranski (formula.u.racing@gmail.com)</a></h3>
+        <!-- Contact Form -->
+        <form action="mailto:formula.u.racing@gmail.com" method="post" enctype="text/plain" class="mt-4 p-4 border rounded shadow">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
       </div>
     </div>
   </div>
